@@ -1,0 +1,13 @@
+@use "../globals/variables" as vars;
+
+#about-me{
+    text-align: justify;
+    word-break: break-word;
+
+    div{
+        font-size: var(vars.$medium);
+        width: 60%;
+        margin: 0 auto 0 auto;
+        padding: 0 0 4rem 0;
+    }
+}

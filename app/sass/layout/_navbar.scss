@@ -1,0 +1,70 @@
+@use "../globals/variables" as vars;
+
+#navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    transform: translateZ(0);
+
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(vars.$accent-bg-color);
+
+    z-index: 100;
+    
+    -webkit-box-shadow: 0px -1px 18px 2px rgba(0,0,0,0.48);
+    -moz-box-shadow: 0px -1px 18px 2px rgba(0,0,0,0.48);
+    box-shadow: 0px -1px 18px 2px rgba(0,0,0,0.48);
+
+    &__index {
+        display: flex;
+        align-items: center;
+        color: var(vars.$accent-text-color);
+    }
+
+    &__name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > div{
+            display: flex;
+            align-items: center;
+
+            div:first-child{
+                padding: 0 0.5rem 0 0;
+            }
+        }
+
+        & span{
+            color: var(vars.$accent-text-color);
+            font-size: var(vars.$medium);
+        }
+
+        @media (max-width: vars.$small-screen) {
+            &::after{
+                content: 'Navigation';
+            }
+        }
+    }
+
+    @media (max-width: vars.$small-screen) {
+        flex-direction: column;
+        
+        &__index {
+            padding: 1rem 0 0 0;
+
+            ol{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .horizontal-list > li{
+            margin: 0 0 0 1rem;
+        }
+    }
+}

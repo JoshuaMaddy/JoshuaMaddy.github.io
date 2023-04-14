@@ -1,0 +1,42 @@
+@use "../globals/variables" as vars;
+
+#skills{
+    height: min-content;
+    width: 100%;
+    background-color: var(vars.$accent-bg-color);
+
+    padding: 0 0 2rem 0;
+
+    h1{
+        font-size: var(vars.$large);
+        padding: 2rem 0 2rem 0;
+        text-align: center;
+    }
+
+    &__grid{
+        width: 90%;
+        height: 100%;
+        margin: 0 auto 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 25vw, 27vw), 1fr));
+        gap: clamp(1rem, 2vw, 2rem);
+    }
+
+    .skill-container{
+        grid-area: auto;
+        width: 100%;
+        height: 100%;
+
+        overflow-wrap: break-word;
+        background-color: var(vars.$main-bg-color);
+
+        border-radius: 1rem;
+        padding: 1rem;
+
+        h2{
+            font-size: var(vars.$medium);
+            color: var(vars.$accent-text-color);
+        }
+    }
+}

@@ -1,0 +1,49 @@
+:root {
+    /*Catppuccin Mocha*/
+    --rosewater: rgb(245, 224, 220);
+    --green: rgb(166, 227, 161);
+    --crust: rgb(17, 17, 27);
+    --base: rgb(30, 30, 46);
+    --surface1: rgb(69, 71, 90);
+
+    --main-bg-color: var(--crust);
+    --accent-bg-color: var(--base);
+    --main-text-color: var(--rosewater);
+    --accent-text-color: var(--green);
+    --notes-text-color: var(--surface1);
+}
+
+$small-screen: 50rem;
+
+:root {
+    --extra-small: 0.2rem;
+    --small: 0.5rem;
+    --normal: 1rem;
+    --medium: 1.5rem;
+    --large: 3rem;
+    --extra-large: 5rem;
+    --extra-extra-large: 8rem;
+
+    @media (max-width: $small-screen) {
+        --small: 0.4rem;
+        --normal: 0.9rem;
+        --medium: 1.4rem;
+        --large: 2.9rem;
+        --extra-large: 4.9rem;
+        --extra-extra-large: 7.9rem;
+    }
+}
+
+$main-text-color: --main-text-color;
+$accent-text-color: --accent-text-color;
+$main-bg-color: --main-bg-color;
+$accent-bg-color: --accent-bg-color;
+$notes-text-color: --notes-text-color;
+
+$small: --small;
+$normal: --normal;
+$medium: --medium;
+$large: --large;
+$extra-large: --extra-large;
+$extra-extra-large: --extra-extra-large;
+

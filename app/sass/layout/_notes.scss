@@ -1,0 +1,14 @@
+@use "../globals/variables" as vars;
+
+#notes{
+    color: var(vars.$notes-text-color);
+
+    width: max-content;
+    margin: 0 auto 0 auto;
+    padding: 0 0 2rem 0;
+
+    a{
+        color: inherit;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,49 @@
+@use "../globals/variables" as vars;
+
+#work{
+    background-color: var(vars.$accent-bg-color);
+
+    padding: 2rem 0 2rem 0;
+
+    h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    h3{
+        color: var(vars.$accent-text-color);
+    }
+
+    .work-entry, .research-entry{
+        padding: 1rem 0 1rem 0;
+        margin: 0 auto 0 auto;
+    }
+
+    #research-entries, #work-entries, #honors-entries{
+        width: 70%;
+        padding: 1rem;
+        margin: 2rem auto 2rem auto;
+
+        background-color: var(vars.$main-bg-color);
+        border-radius: 1rem;
+    }
+
+    .honors-entry{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 1rem 0;
+
+        h3{
+            color: var(vars.$main-text-color);
+            
+            @media (max-width: vars.$small-screen) {
+                font-size: var(--normal);
+            }
+
+            &:last-child{
+                width: max-content;
+                text-align: end;
+            }
+        }
+    }
+}

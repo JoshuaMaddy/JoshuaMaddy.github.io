@@ -1,0 +1,44 @@
+@use "../globals/variables" as vars;
+
+#contact{
+    padding: 1rem 2rem 3rem 2rem;
+
+    h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .email{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        h3:first-child{
+            padding: 0 1rem 0 0;
+        }
+
+        h3:last-child{
+            color: var(vars.$accent-text-color)
+        }
+    }
+
+    #socials{
+        width: 15rem;
+        height: 5rem;
+
+        padding: 1rem 0 0 0;
+        margin: 0 auto 0 auto;
+
+        display: flex;
+        justify-content: space-around;
+
+        a{
+            width: 5rem;
+        }
+
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
+}

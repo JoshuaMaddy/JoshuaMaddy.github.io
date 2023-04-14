@@ -1,0 +1,497 @@
+:root {
+  /*Catppuccin Mocha*/
+  --rosewater: rgb(245, 224, 220);
+  --green: rgb(166, 227, 161);
+  --crust: rgb(17, 17, 27);
+  --base: rgb(30, 30, 46);
+  --surface1: rgb(69, 71, 90);
+  --main-bg-color: var(--crust);
+  --accent-bg-color: var(--base);
+  --main-text-color: var(--rosewater);
+  --accent-text-color: var(--green);
+  --notes-text-color: var(--surface1);
+}
+
+:root {
+  --extra-small: 0.2rem;
+  --small: 0.5rem;
+  --normal: 1rem;
+  --medium: 1.5rem;
+  --large: 3rem;
+  --extra-large: 5rem;
+  --extra-extra-large: 8rem;
+}
+@media (max-width: 50rem) {
+  :root {
+    --small: 0.4rem;
+    --normal: 0.9rem;
+    --medium: 1.4rem;
+    --large: 2.9rem;
+    --extra-large: 4.9rem;
+    --extra-extra-large: 7.9rem;
+  }
+}
+
+#navbar {
+  position: sticky;
+  transform: translateZ(0);
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--accent-bg-color);
+  z-index: 100;
+  box-shadow: 0px -1px 18px 2px rgba(0, 0, 0, 0.48);
+}
+#navbar__index {
+  display: flex;
+  align-items: center;
+  color: var(--accent-text-color);
+}
+#navbar__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar__name > div {
+  display: flex;
+  align-items: center;
+}
+#navbar__name > div div:first-child {
+  padding: 0 0.5rem 0 0;
+}
+#navbar__name span {
+  color: var(--accent-text-color);
+  font-size: var(--medium);
+}
+@media (max-width: 50rem) {
+  #navbar__name::after {
+    content: "Navigation";
+  }
+}
+@media (max-width: 50rem) {
+  #navbar {
+    flex-direction: column;
+  }
+  #navbar__index {
+    padding: 1rem 0 0 0;
+  }
+  #navbar__index ol {
+    display: flex;
+    flex-direction: column;
+  }
+  #navbar .horizontal-list > li {
+    margin: 0 0 0 1rem;
+  }
+}
+
+#central {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 50rem) {
+  #central {
+    height: 50vh;
+  }
+}
+#central__name {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+#central__name h1 {
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.562);
+  font-size: var(--large);
+}
+#central__name h1:last-of-type {
+  color: var(--accent-text-color);
+  font-size: var(--extra-large);
+}
+#central__name #headshot {
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  right: 0%;
+  z-index: -1;
+}
+#central__name #headshot img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 50rem) {
+  #central__name {
+    width: 90%;
+  }
+  #central__name h1 {
+    font-size: calc(var(--medium) * 1.4);
+  }
+  #central__name h1:last-of-type {
+    font-size: var(--large);
+  }
+}
+
+#skills {
+  height: -moz-min-content;
+  height: min-content;
+  width: 100%;
+  background-color: var(--accent-bg-color);
+  padding: 0 0 2rem 0;
+}
+#skills h1 {
+  font-size: var(--large);
+  padding: 2rem 0 2rem 0;
+  text-align: center;
+}
+#skills__grid {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 25vw, 27vw), 1fr));
+  gap: clamp(1rem, 2vw, 2rem);
+}
+#skills .skill-container {
+  grid-area: auto;
+  width: 100%;
+  height: 100%;
+  overflow-wrap: break-word;
+  background-color: var(--main-bg-color);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#skills .skill-container h2 {
+  font-size: var(--medium);
+  color: var(--accent-text-color);
+}
+
+#projects {
+  padding: 2rem 4rem 2rem 4rem;
+}
+#projects h2 {
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+}
+#projects h3 {
+  color: var(--accent-text-color);
+}
+#projects a, #projects a:visited {
+  color: var(--accent-text-color);
+  text-decoration: underline;
+}
+#projects #project__ar-physics {
+  padding: 1rem 0 0 0;
+}
+#projects .project {
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 50rem) {
+  #projects .project {
+    flex-direction: column;
+  }
+  #projects .project.right {
+    flex-flow: column-reverse;
+  }
+}
+#projects .project__description {
+  padding: 0.5rem 0 0 0;
+}
+#projects .project__text {
+  width: 60%;
+}
+@media (max-width: 50rem) {
+  #projects .project__text {
+    width: 100%;
+  }
+}
+#projects .project__images {
+  width: 40%;
+  position: relative;
+}
+@media (max-width: 50rem) {
+  #projects .project__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0 0 0;
+  }
+}
+#projects .project__images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: -10;
+}
+@media (max-width: 50rem) {
+  #projects .project__images img {
+    width: 100%;
+    padding: 0 0 0.2rem 0;
+  }
+}
+#projects .project#project__metaphysical-museum div.project__images > div {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+}
+#projects .project#project__metaphysical-museum div.project__images > div:nth-child(2) {
+  top: 20%;
+  left: 22%;
+  z-index: 2;
+}
+#projects .project#project__metaphysical-museum div.project__images > div:nth-child(3) {
+  top: 10%;
+  left: 45%;
+  z-index: 1;
+}
+@media (max-width: 50rem) {
+  #projects .project#project__metaphysical-museum div.project__images > div {
+    width: min(50%, 50vh);
+    position: inherit;
+  }
+  #projects .project#project__metaphysical-museum div.project__images > div:nth-child(2) {
+    top: auto;
+    left: auto;
+  }
+  #projects .project#project__metaphysical-museum div.project__images > div:nth-child(3) {
+    top: auto;
+    left: auto;
+  }
+}
+#projects .project#project__ar-physics div.project__images > div {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+}
+#projects .project#project__ar-physics div.project__images > div:nth-child(1) {
+  top: 8%;
+  left: 0%;
+}
+#projects .project#project__ar-physics div.project__images > div:nth-child(2) {
+  top: 20%;
+  left: 22%;
+  z-index: 2;
+}
+#projects .project#project__ar-physics div.project__images > div:nth-child(3) {
+  top: 0%;
+  left: 45%;
+  z-index: 1;
+}
+@media (max-width: 50rem) {
+  #projects .project#project__ar-physics div.project__images > div {
+    width: min(50%, 50vh);
+    position: inherit;
+  }
+  #projects .project#project__ar-physics div.project__images > div:nth-child(1) {
+    top: auto;
+    left: auto;
+  }
+  #projects .project#project__ar-physics div.project__images > div:nth-child(2) {
+    top: auto;
+    left: auto;
+  }
+  #projects .project#project__ar-physics div.project__images > div:nth-child(3) {
+    top: auto;
+    left: auto;
+  }
+}
+#projects .project#project__reSearch div.project__images > div {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+}
+#projects .project#project__reSearch div.project__images > div:nth-child(1) {
+  top: 2%;
+  left: 6%;
+}
+#projects .project#project__reSearch div.project__images > div:nth-child(2) {
+  top: 20%;
+  left: 30%;
+}
+@media (max-width: 50rem) {
+  #projects .project#project__reSearch div.project__images > div {
+    width: min(50%, 50vh);
+    position: inherit;
+  }
+  #projects .project#project__reSearch div.project__images > div:nth-child(1) {
+    top: auto;
+    left: auto;
+  }
+  #projects .project#project__reSearch div.project__images > div:nth-child(2) {
+    top: auto;
+    left: auto;
+  }
+}
+#projects .project#project__lore-master .project__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#projects .project#project__lore-master .project__images a {
+  width: 50%;
+  height: 80%;
+}
+@media (max-width: 50rem) {
+  #projects .project#project__lore-master .project__images a {
+    width: min(50%, 50vh);
+    position: inherit;
+  }
+}
+
+#work {
+  background-color: var(--accent-bg-color);
+  padding: 2rem 0 2rem 0;
+}
+#work h2 {
+  width: 100%;
+  text-align: center;
+}
+#work h3 {
+  color: var(--accent-text-color);
+}
+#work .work-entry, #work .research-entry {
+  padding: 1rem 0 1rem 0;
+  margin: 0 auto 0 auto;
+}
+#work #research-entries, #work #work-entries, #work #honors-entries {
+  width: 70%;
+  padding: 1rem;
+  margin: 2rem auto 2rem auto;
+  background-color: var(--main-bg-color);
+  border-radius: 1rem;
+}
+#work .honors-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 1rem 0;
+}
+#work .honors-entry h3 {
+  color: var(--main-text-color);
+}
+@media (max-width: 50rem) {
+  #work .honors-entry h3 {
+    font-size: var(--normal);
+  }
+}
+#work .honors-entry h3:last-child {
+  width: -moz-max-content;
+  width: max-content;
+  text-align: end;
+}
+
+#contact {
+  padding: 1rem 2rem 3rem 2rem;
+}
+#contact h2 {
+  width: 100%;
+  text-align: center;
+}
+#contact .email {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#contact .email h3:first-child {
+  padding: 0 1rem 0 0;
+}
+#contact .email h3:last-child {
+  color: var(--accent-text-color);
+}
+#contact #socials {
+  width: 15rem;
+  height: 5rem;
+  padding: 1rem 0 0 0;
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+#contact #socials a {
+  width: 5rem;
+}
+#contact #socials img {
+  height: 100%;
+  width: auto;
+}
+
+#about-me {
+  text-align: justify;
+  word-break: break-word;
+}
+#about-me div {
+  font-size: var(--medium);
+  width: 60%;
+  margin: 0 auto 0 auto;
+  padding: 0 0 4rem 0;
+}
+
+#notes {
+  color: var(--notes-text-color);
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto 0 auto;
+  padding: 0 0 2rem 0;
+}
+#notes a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+  font-size: var(--normal);
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.horizontal-list {
+  display: flex;
+}
+.horizontal-list > li {
+  margin: 0 0 0 2rem;
+}
+
+.multiline {
+  white-space: pre-wrap;
+}
+
+h1 {
+  font-size: var(--extra-large);
+}
+
+h2 {
+  font-size: var(--large);
+}
+
+h3 {
+  font-size: var(--medium);
+}
+
+h4 {
+  font-size: var(--normal);
+}/*# sourceMappingURL=style.css.map */
