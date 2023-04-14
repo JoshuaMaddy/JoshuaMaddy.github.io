@@ -7,17 +7,24 @@ $(function() {
     var projects = document.getElementById('projects');
     var work = document.getElementById('work');
     var contact = document.getElementById('contact');
-
+    
     var shown = true;
-
+    
+    const mediaQuery = window.matchMedia(`(max-width: ${remToPx(50)}px)`);
+    
+    lightbox.option({
+        'resizeDuration': 0,
+        'imageFadeDuration': 0,
+        'fadeDuration': 0,
+        'wrapAround': false
+    });
+    
     function remToPx(rem) {
         // Get the computed font size of the root element
         var fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
         // Multiply the rem value by the computed font size
         return rem * fontSize;
-      }      
-
-    const mediaQuery = window.matchMedia(`(max-width: ${remToPx(50)}px)`);
+    };
 
     window.onresize = function (){
         if (mediaQuery.matches) {
@@ -62,10 +69,9 @@ $(function() {
             }
             shown = !shown
         }
-    }
+    };
 
     function scrollTo(element) {
-
         var navbarRect = navbar.getBoundingClientRect();
         var elementRect = element.getBoundingClientRect();
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -76,11 +82,4 @@ $(function() {
             behavior: 'smooth'
         });
     };
-
-    lightbox.option({
-        'resizeDuration': 0,
-        'imageFadeDuration': 0,
-        'fadeDuration': 0,
-        'wrapAround': false
-    });
 });
