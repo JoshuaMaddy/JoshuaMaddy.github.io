@@ -1,6 +1,7 @@
 @use "../globals/variables" as vars;
 
 #projects{
+    background-color: var(vars.$accent-bg-color);
     padding: 2rem 4rem 2rem 4rem;
 
     h2{

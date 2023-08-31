@@ -1,8 +1,6 @@
 @use "../globals/variables" as vars;
 
 #work{
-    background-color: var(vars.$accent-bg-color);
-
     padding: 2rem 0 2rem 0;
 
     h2{
@@ -24,7 +22,7 @@
         padding: 1rem;
         margin: 2rem auto 2rem auto;
 
-        background-color: var(vars.$main-bg-color);
+        background-color: var(vars.$accent-bg-color);
         border-radius: 1rem;
     }
 

@@ -2,7 +2,7 @@
 
 $(function() {
     var navbar = document.getElementById('navbar');
-    var aboutMe = document.getElementById('about-me');
+    var aboutMe = document.getElementById('central__name');
     var skills = document.getElementById('skills');
     var projects = document.getElementById('projects');
     var work = document.getElementById('work');

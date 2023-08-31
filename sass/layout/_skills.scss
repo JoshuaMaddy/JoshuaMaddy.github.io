@@ -1,9 +1,10 @@
 @use "../globals/variables" as vars;
 
 #skills{
+    background-color: var(vars.$accent-bg-color);
+
     height: min-content;
     width: 100%;
-    background-color: var(vars.$accent-bg-color);
 
     padding: 0 0 2rem 0;
 

@@ -63,7 +63,8 @@
   padding: 0 0.5rem 0 0;
 }
 #navbar__name span {
-  font-size: calc(var(--normal) * 1.1);
+  color: var(--accent-text-color);
+  font-size: var(--medium);
 }
 @media (max-width: 50rem) {
   #navbar__name::after {
@@ -141,7 +142,6 @@
 }
 
 #skills {
-  background-color: var(--accent-bg-color);
   height: -moz-min-content;
   height: min-content;
   width: 100%;
@@ -353,6 +353,7 @@
 }
 
 #work {
+  background-color: var(--accent-bg-color);
   padding: 2rem 0 2rem 0;
 }
 #work h2 {
@@ -370,7 +371,7 @@
   width: 70%;
   padding: 1rem;
   margin: 2rem auto 2rem auto;
-  background-color: var(--accent-bg-color);
+  background-color: var(--main-bg-color);
   border-radius: 1rem;
 }
 #work .honors-entry {
